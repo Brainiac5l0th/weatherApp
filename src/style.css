@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+body {
+  color: #7367f0;
+  overflow: hidden;
+  font-size: 16px;
+  cursor: url("./images/cursor.png"), auto;
+}
+
+.mainBody {
+  /* background: linear-gradient(135deg, #69ff97 10%,#00e4ff  100%); */
+  background: linear-gradient(135deg, #ce9ffc 10%, #7367f0 100%);
+  height: 100vh;
+  width: 100vw;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  min-height: 50px;
+  width: 60%;
+  margin: auto;
+  border-radius: 15px;
+}
+
+.search {
+  margin: 2rem;
+}
+.search input {
+  border: none;
+  font-size: 1.1rem;
+  outline: none;
+  border: 0.5px solid rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);
+  /* background-color: transparent; */
+  padding: 0.75rem 3rem;
+  border-radius: 15px;
+  padding-left: 1.5rem;
+}
+
+.bodySection {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 4rem;
+  min-width: 60%;
+  min-height: 75%;
+  width: 60%;
+  height: 75%;
+  background: rgba(255, 255, 255, 0.32);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.3px);
+  -webkit-backdrop-filter: blur(6.3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* upper body */
+.body-upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.temp {
+  color: #7367f0;
+  letter-spacing: 1.5px;
+  font-size: 4rem;
+}
+.cityName {
+  color: #7367f0;
+  letter-spacing: 0.9px;
+  font-size: 4rem;
+}
+.weaDescrip {
+  color: #7367f0;
+  font-size: 1.2rem;
+}
+
+/* middle */
+
+.body-middle {
+  margin-bottom: 1rem;
+  min-height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.body-middle::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 50%;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.body-middle::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.importantInfo {
+  font-size: 1.25rem;
+  min-width: 150px;
+  margin: 1rem 0.5rem;
+  min-height: 60px;
+  text-align: center;
+  color: #7367f0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+.importantInfo p {
+  font-size: 1rem;
+  color: rgba(115, 103, 240, 0.7);
+  letter-spacing: 1;
+}
+.min-max span {
+  margin: 2px;
+}
+.bold {
+  font-weight: 700;
+}
+
+.empty {
+  text-align: center;
+  color: #7367f0;
+}
+/* lower card css */
+
+.spanAqi {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 1px solid #7367f0;
+}
+.body-lower {
+  display: flex;
+  flex-direction: column;
+}
+.body-lower h3 {
+  display: inline-block;
+}
+.body-lower div {
+  margin-bottom: 10px;
+}
+
+/* mediaqueries */
+@media only screen and (max-width: 1180px) {
+  .bodySection {
+    padding: 3.75rem;
+    min-width: 70%;
+    min-height: 75%;
+    width: 60%;
+    height: 75%;
+  }
+}
+/* for tablet */
+@media only screen and (max-width: 968px) {
+  .weaDescrip {
+    font-size: 1rem;
+  }
+  .temp,
+  .cityName {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .temp,
+  .cityName {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .temp,
+  .cityName {
+    font-size: 2.5rem;
+  }
+  .bodySection {
+    width: 85%;
+    height: 85%;
+  }
+}
+@media only screen and (max-width: 548px) {
+  .body-middle::after,
+  .body-middle::before {
+    display: none;
+  }
+  .temp,
+  .cityName {
+    font-size: 2rem;
+  }
+  .bodySection {
+    padding: 3.75rem;
+    width: 90%;
+    height: 90%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .mainBody {
+    font-size: 10px;
+  }
+  .bodySection {
+    padding: 2.75rem;
+    width: 95%;
+    height: 95%;
+  }
+}
