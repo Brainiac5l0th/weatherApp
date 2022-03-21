@@ -1,1 +1,1 @@
-## Technology Used: OpenWeatherApi, aqi api, React, React Hooks
+## Technology Used: OpenWeatherApi, AQI api, React, React Hooks
